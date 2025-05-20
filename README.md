@@ -1,10 +1,10 @@
-# LLVision Test Connection - Android SDK Entegrasyon Projesi
+# LLVision Test Connection
 
 Bu proje, harici SDK dosyalarının manuel olarak eklendiği ve Android Studio kullanılarak geliştirilen bir test uygulamasıdır. Uygulamanın amacı, SDK ile bağlantı kurmak ve temel işlevleri test etmektir.
 
 ---
 
-## ✨ Temel Bilgiler
+## Temel Bilgiler
 
 * **Paket Adı:** `com.vartech.llvisiontestconnection`
 * **Minimum SDK Seviyesi:** 24
@@ -13,19 +13,13 @@ Bu proje, harici SDK dosyalarının manuel olarak eklendiği ve Android Studio k
 * **Jetpack Compose:** Kullanılıyor
 * Android Studio (Arctic Fox ve üzeri)
 
-
-```bash
-git clone https://github.com/kullaniciadi/llvision-test-connection.git
-cd llvision-test-connection
-```
+---
 
 ### Gerekli SDK Dosyalarını Ekleyin
 
 Projenin `libs` klasörü içerisine ilgili `.aar` ve `.jar` SDK dosyalarını kopyalayın.
 
-(Proje dosyaları içerisinde hali hazırda eklenmiştir.)
-
-### Bağlantıyı Tanımlayan Kod Parçası
+(Hali hazırda eklenmiştir)
 
 Aşağıdaki kod, bu SDK dosyalarını projenize dahil eder:
 
@@ -42,8 +36,11 @@ sourceSets {
         jniLibs.srcDirs("libs")
     }
 }
+```
 
-## build.gradle 
+---
+
+## build.gradle
 
 ```kotlin
 plugins {
@@ -89,7 +86,9 @@ android {
         compose = true
     }
 }
+```
 
+---
 
 ## AndroidManifest.xml İzinleri
 
@@ -103,5 +102,7 @@ Uygulama, aşağıdaki izinleri istemektedir:
 <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
 ```
 
-Android 11 ve üzeri için `MANAGE_EXTERNAL_STORAGE` iznini almak için kullanıcıdan ayrıca manuel izin alınması gerekir. Örnek kodlar README sonunda verilebilir.
+Android 11 ve üzeri için `MANAGE_EXTERNAL_STORAGE` iznini almak için kullanıcıdan ayrıca manuel izin alınması gerekir.
+
+---
 
